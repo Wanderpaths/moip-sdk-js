@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         src: "src/**/*.js",
         specs: "spec/**/*.js",
         helpers: "spec/helpers/*.js",
-        vendor: ["lib/jsencrypt.min.js"],
+        vendor: [],
       },
       coverage: {
         src: '<%= jasmine.options.src %>',
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 
     concat: {
       dist: {
-        src: ["lib/jsencrypt.min.js", "src/**/*.js"],
+        src: ["src/**/*.js"],
         dest: 'build/<%= pkg.name %>.js',
       },
       options: {
